@@ -8,7 +8,7 @@ export const GetAdminDashBoadrdData = createAsyncThunk(
     const { Token } = JSON.parse(localStorage.getItem("Token"));
     try {
       const Data = await axios.get(
-        `${process.env.REACT_APP_API}/Admin/Status`,
+        `${process.env.REACT_APP_API_URL}/Admin/Status`,
         {
           headers: {
             Authorization: Token,
@@ -28,7 +28,7 @@ export const GetSingleStudent = createAsyncThunk(
     const { Token } = JSON.parse(localStorage.getItem("Token"));
     try {
       const Data = await axios.get(
-        `${process.env.REACT_APP_API}/Admin/Student/${payload}`,
+        `${process.env.REACT_APP_API_URL}/Admin/Student/${payload}`,
         {
           headers: {
             Authorization: Token,
@@ -50,7 +50,7 @@ export const StudentAdminChandeAvatar = createAsyncThunk(
     try {
       await axios
         .post(
-          `${process.env.REACT_APP_API}/Student/UpdataAvatar`,
+          `${process.env.REACT_APP_API_URL}/Student/UpdataAvatar`,
           {
             _id: payload._id,
             Token: payload.Token,
@@ -84,7 +84,7 @@ export const StudentAdminRemoveAvatar = createAsyncThunk(
     try {
       await axios
         .post(
-          `${process.env.REACT_APP_API}/Student/RemoveAvatar`,
+          `${process.env.REACT_APP_API_URL}/Student/RemoveAvatar`,
           {
             _id: payload._id,
             Token: payload.Token,
@@ -162,6 +162,6 @@ const AdminSlice = createSlice({
   },
 });
 
-export const {} = AdminSlice.actions;
+// export const {} = AdminSlice.actions;
 
 export default AdminSlice.reducer;

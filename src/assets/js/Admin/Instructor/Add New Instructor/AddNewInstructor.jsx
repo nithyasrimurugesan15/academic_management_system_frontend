@@ -4,7 +4,7 @@ import "./AddNewInstructor.css";
 import Mountain from "../../../components/Mountain Template/Mountain";
 
 function AddNewInstructor() {
-  let Navigate = useNavigate();
+  const navigate = useNavigate(); // ✅ fixed (lowercase + will use it)
 
   const [Data, SetData] = useState({
     Instructor_name: "",
@@ -12,7 +12,12 @@ function AddNewInstructor() {
     parent_nat_id: "",
   });
 
-  const AddInstructor = () => {};
+  const AddInstructor = () => {
+    console.log(Data);
+
+    // ✅ Example navigation after adding
+    navigate("/admin/instructors"); 
+  };
 
   return (
     <React.Fragment>
@@ -21,8 +26,10 @@ function AddNewInstructor() {
           <h1>Add Instructor</h1>
         </div>
       </Mountain>
+
       <div className="add-new-Instructor">
         <div className="container">
+
           <div className="card">
             <input
               type="search"
@@ -35,6 +42,7 @@ function AddNewInstructor() {
             />
             <label htmlFor="Instructor_name">Instructor Name</label>
           </div>
+
           <div className="card">
             <input
               type="search"
@@ -47,6 +55,7 @@ function AddNewInstructor() {
             />
             <label htmlFor="Instructor_nat_id">Instructor Nat ID</label>
           </div>
+
           <div className="card">
             <input
               type="search"
@@ -59,12 +68,15 @@ function AddNewInstructor() {
             />
             <label htmlFor="parent_nat_id">Parent Nat Id</label>
           </div>
+
           <div className="card">
-            <button onClick={() => AddInstructor()}> Add</button>
+            <button onClick={AddInstructor}>Add</button>
           </div>
+
         </div>
       </div>
     </React.Fragment>
   );
 }
+
 export default AddNewInstructor;
