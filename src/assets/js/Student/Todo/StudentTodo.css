@@ -1,0 +1,271 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Todo
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.STudent-Todo-list {
+  position: relative;
+}
+.STudent-Todo-list::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 300px;
+  background-image: url("../../../img/Todo/bg-desktop.jpg");
+  background-size: cover;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+
+.STudent-Todo-list .container {
+  position: relative;
+}
+.STudent-Todo-list .container .data {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 100px 0 20px 0;
+}
+.STudent-Todo-list .container .data h1 {
+  margin: 0;
+  color: var(--white-color);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: bold;
+  font-size: 40px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Todo card
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.STudent-Todo-list .container .card {
+  position: relative;
+  padding: 1rem;
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: hsl(235, 24%, 19%);
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.STudent-Todo-list .container .card:nth-child(2) {
+  margin-bottom: 20px;
+}
+.STudent-Todo-list .container .card:nth-child(3) i {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border: 0;
+  border-radius: var(--main-border-radius);
+  background-color: var(--red-color);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+.STudent-Todo-list .container .card:last-child {
+  margin-bottom: 20px;
+}
+
+.STudent-Todo-list .container .card.draggable {
+  cursor: grab;
+}
+.STudent-Todo-list .container .card.draggable:active {
+  cursor: grabbing;
+}
+
+@media (max-width: 992px) {
+  .STudent-Todo-list .container .card {
+    width: 100%;
+  }
+  .STudent-Todo-list .container .card:nth-child(3) {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Todo inputs
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.STudent-Todo-list .container .card input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+}
+
+.STudent-Todo-list .container .card > i {
+  position: relative;
+  min-width: 35px;
+  height: 35px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  border-radius: 50%;
+  left: 10px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.STudent-Todo-list .container .card i:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Todo info
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.STudent-Todo-list .container .card .info p {
+  color: var(--main-p-color);
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.STudent-Todo-list .container .card .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.STudent-Todo-list .container .card .info button {
+  position: relative;
+  color: var(--main-p-color);
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.STudent-Todo-list .container .card .info button.active {
+  color: var(--main-color);
+}
+.STudent-Todo-list .container .card .info button:hover {
+  color: #fff;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Todo data
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.STudent-Todo-list .container .card .box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.STudent-Todo-list .container .card .box input[type="checkbox"] {
+  display: none;
+  appearance: none;
+}
+.STudent-Todo-list .container .card .box label {
+  position: relative;
+  padding-left: 30px;
+  cursor: move;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+}
+
+.STudent-Todo-list .container .card .box label::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--main-p-color);
+  left: 0;
+  top: 50%;
+  transform: translatey(-50%);
+  border-radius: 3px;
+  transition: var(--main-transition);
+}
+.STudent-Todo-list .container .card .box label:hover::before {
+  border: 2px solid var(--main-color);
+}
+.STudent-Todo-list .container .card .box label::after {
+  position: absolute;
+  content: "\f00c";
+  font-weight: 900;
+  font-family: var(--fa-style-family-classic);
+  left: 0;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: var(--main-color);
+  border-radius: 3px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transform: translateY(-50%) scale(0) rotate(360deg);
+  transition: var(--main-transition);
+}
+.STudent-Todo-list
+  .container
+  .card
+  .box
+  input[type="checkbox"]:checked
+  + label::after {
+  transform: translateY(-50%) scale(1);
+}
+
+.STudent-Todo-list .container .card .box.checkAll {
+  width: fit-content;
+}
+.STudent-Todo-list
+  .container
+  .card
+  .box.checkAll
+  input[type="checkbox"]:checked
+  + label {
+  text-decoration: none;
+}
+.STudent-Todo-list .container .card .box.checkAll label::before {
+  border: 2px solid var(--main-color);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Todo data actions
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.STudent-Todo-list .container .card .actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.STudent-Todo-list .container .card .actions > i {
+  position: relative;
+  min-width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  border-radius: 50%;
+  left: 10px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.STudent-Todo-list .container .card i.CompleatedTodo {
+  color: rgb(57, 221, 24);
+}
+.STudent-Todo-list .container .card i:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.STudent-Todo-list .container .card i.CompleatedTodo:hover {
+  background-color: rgb(57, 221, 24);
+  color: #fff;
+}
+
+.STudent-Todo-list .container .card .actions .HandleDelete {
+  display: none;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0;
+  border: 0;
+}
+.STudent-Todo-list .container .card:hover .HandleDelete {
+  display: flex;
+  background-color: transparent;
+}
+.STudent-Todo-list .container .card:hover .HandleDelete:hover {
+  color: var(--red-color);
+}

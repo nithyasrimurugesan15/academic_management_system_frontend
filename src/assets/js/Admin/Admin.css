@@ -1,0 +1,9 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Admin
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Admin {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--main-background-color);
+}

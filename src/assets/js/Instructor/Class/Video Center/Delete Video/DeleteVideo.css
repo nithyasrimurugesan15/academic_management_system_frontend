@@ -1,0 +1,46 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# General
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+@import url("../../../../../css/root.css");
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Delete Video
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.DeleteVideo {
+  position: relative;
+  width: 100%;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.DeleteVideo .container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.DeleteVideo .card {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+  box-shadow: 1px 2px 5px 5px var(--white-color);
+}
+.DeleteVideo .card .data {
+  position: relative;
+  width: 100%;
+  background-color: var(--white-color);
+  border: 0;
+  padding: 8px 14px;
+  transition: var(--main-transition);
+  cursor: pointer;
+  color: var(--main-text-color);
+  font-size: 15px;
+  border-radius: var(--main-border-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.DeleteVideo .card .data i:hover {
+  color: var(--red-color);
+  transition: var(--main-transition);
+}

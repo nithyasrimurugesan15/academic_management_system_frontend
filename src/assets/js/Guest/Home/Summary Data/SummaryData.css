@@ -1,0 +1,85 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# General
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+@import url("../../../../css/root.css");
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Student  home page Student SummaryData
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.SummaryData {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  margin: 0;
+  background-color: var(--white-color);
+}
+.SummaryData .container {
+  position: relative;
+}
+.SummaryData .header-data h1 {
+  /* font-size: 80px; */
+  /* color: var(--main-text-color); */
+}
+.SummaryData .header-data a {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: var(--main-color);
+  border-radius: 4px 4px 4px 4px;
+  padding: 20px 50px 20px 50px;
+  color: #fff;
+  transition: var(--main-transition);
+  display: inline-block;
+  margin-bottom: 50px;
+}
+.SummaryData .header-data a:hover {
+  background-color: var(--main-color-hover);
+  animation: up 1.5s alternate infinite;
+}
+@keyframes up {
+  100% {
+    transform: translateY(-25%);
+  }
+}
+@media (max-width: 767px) {
+  .SummaryData .header-data {
+    text-align: center;
+  }
+  .SummaryData .header-data h1 {
+    font-size: 35px;
+  }
+}
+.SummaryData .footer-data .box {
+  background-color: var(--main-white-alt);
+  color: #fff;
+}
+.SummaryData .footer-data .box a i {
+  font-size: 20px;
+  margin-left: 10px;
+  animation: left 0.8s alternate-reverse infinite;
+}
+@keyframes left {
+  100% {
+    transform: translateX(-25%);
+  }
+}
+.SummaryData .footer-data .box i {
+  font-size: 50px;
+  color: var(--main-color);
+  margin-right: 40px;
+}
+.SummaryData .footer-data .box .data-box p {
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .SummaryData .footer-data .box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .SummaryData .footer-data .box i {
+    margin: 0;
+  }
+}

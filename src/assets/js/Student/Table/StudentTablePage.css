@@ -1,0 +1,9 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Student table Page
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.StudentTablePage {
+  position: relative;
+  min-width: 100%;
+  padding-bottom: var(--main-padding-bottom);
+  padding-top: var(--main-padding-top);
+}

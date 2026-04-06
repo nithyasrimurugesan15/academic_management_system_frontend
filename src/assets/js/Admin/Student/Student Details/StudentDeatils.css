@@ -1,0 +1,277 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+#  Student Details
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.StudentDeatils {
+  position: relative;
+}
+.StudentDeatils .Information-Data-box {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+@media (max-width: 992px) {
+  .StudentDeatils .Information-Data-box {
+    flex-direction: column;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+#  Student Avatar
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.StudentDeatils .Information-Data-box .UserImage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.StudentDeatils .Information-Data-box .UserAvatar {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.StudentDeatils .Information-Data-box .UserAvatar::before {
+  position: absolute;
+  content: "\f102  upload";
+  font-family: "font Awesome 5 free";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  color: var(--white-color);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  opacity: 0;
+  transition: var(--main-transition);
+}
+.StudentDeatils .Information-Data-box .UserAvatar:hover::before {
+  opacity: 1;
+}
+.StudentDeatils .Information-Data-box .UserAvatar img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.StudentDeatils .Information-Data-box .UserImage .actions {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.StudentDeatils .Information-Data-box .UserImage .actions button {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+  box-shadow: 1px 2px 5px 5px var(--white-color);
+  border: 0;
+}
+.StudentDeatils .Information-Data-box .UserImage .actions button span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background-color: var(--white-color);
+  padding: 8px 14px;
+  cursor: pointer;
+  color: var(--main-text-color);
+  font-size: 15px;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+}
+.StudentDeatils .Information-Data-box .UserImage .actions button span:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+#  Student Information
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.StudentDeatils .Information-Data-box .details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.StudentDeatils .Information-Data-box .details h1 {
+  position: relative;
+  color: var(--main-color);
+  padding: 8px 12px;
+}
+.StudentDeatils .Information-Data-box .details .detailItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+  box-shadow: 1px 2px 5px 5px var(--white-color);
+  border: 0;
+}
+.StudentDeatils .Information-Data-box .details .detailItem label {
+  position: relative;
+  padding-left: 5px;
+  color: var(--main-text-color);
+  transition: var(--main-transition);
+}
+.StudentDeatils .Information-Data-box .details .detailItem > input {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background-color: var(--white-color);
+  padding: 8px 14px;
+  cursor: pointer;
+  color: var(--main-text-color);
+  font-size: 15px;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+  caret-color: var(--main-color);
+}
+.StudentDeatils .Information-Data-box .details .detailItem .GpaProcess {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+  padding: 4px 14px;
+  color: var(--main-text-color);
+  font-size: 15px;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+  z-index: 2;
+}
+.StudentDeatils .Information-Data-box .details .detailItem button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background-color: var(--white-color);
+  padding: 8px 14px;
+  cursor: pointer;
+  color: var(--main-text-color);
+  font-size: 15px;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+}
+.StudentDeatils .Information-Data-box .details .detailItem button:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.StudentDeatils .Information-Data-box .details .detailItem .inSemester-actions {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+  padding: 8px 14px;
+  color: var(--main-text-color);
+  font-size: 15px;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+  caret-color: var(--main-color);
+}
+.StudentDeatils
+  .Information-Data-box
+  .details
+  .detailItem
+  .inSemester-actions-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.StudentDeatils
+  .Information-Data-box
+  .details
+  .detailItem
+  .inSemester-actions-box
+  label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 10px 30px 10px 50px;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+.StudentDeatils
+  .Information-Data-box
+  .details
+  .detailItem
+  .inSemester-actions-box
+  label::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--main-color);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.StudentDeatils
+  .Information-Data-box
+  .details
+  .detailItem
+  .inSemester-actions-box
+  label::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: var(--main-transition);
+}
+.StudentDeatils
+  .Information-Data-box
+  .details
+  .detailItem
+  .inSemester-actions-box
+  input:checked
+  + label::after {
+  opacity: 1;
+}
