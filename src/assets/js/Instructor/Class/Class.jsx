@@ -52,9 +52,10 @@ function Class() {
       alert("Please fill all fields ❌");
       return;
     }
+    const API_URL = process.env.REACT_APP_API_URL;
 
     try {
-      await axios.post("http://localhost:3001/api/Subjects/add", {
+      await axios.post(`${API_URL}/API/Subjects/add`, {
         name: Data.name,
         credit_hours: Data.credit_hours,
         time: Data.time,

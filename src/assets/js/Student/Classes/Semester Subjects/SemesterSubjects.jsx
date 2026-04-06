@@ -15,9 +15,11 @@ function SemesterSubjects() {
   const [Search, setSearch] = useState("");
   const [show, setShow] = useState("grid");
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/API/Exams/subject/${id}`)
+        .get(`${API_URL}/API/Exams/subject/${id}`)
       .then((res) => {
         setExams(res.data);
         setLoading(false);
