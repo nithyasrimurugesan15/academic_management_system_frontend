@@ -1,7 +1,7 @@
 import React from "react";
-import "./LodingFeachData.css";
+import "./LoadingFetchData.css";
 import { Player } from "@lottiefiles/react-lottie-player";
-function LodingFeachData() {
+function LoadingFetchData() {
   return (
     <React.Fragment>
       <div className="Loding-feachData">
@@ -17,4 +17,4 @@ function LodingFeachData() {
     </React.Fragment>
   );
 }
-export default LodingFeachData;
+export default LoadingFetchData;

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Mountain from "../../../components/Mountain Template/Mountain";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { Link, useParams } from "react-router-dom";
-import LodingFeachData from "../../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../../components/loading-fetch-data/LoadingFetchData";
 import "./Exams.css";
 import { useDispatch, useSelector } from "react-redux";
 import { GetAllExams } from "../../../../Toolkit/Slices/ExamsSlice";
@@ -61,7 +61,7 @@ function Exams() {
       </Mountain>
       <div className="exams">
         {loading ? (
-          <LodingFeachData />
+          <LoadingFetchData />
         ) : Exams.length > 0 ? (
           <div className="container" data-aos="fade-down">
             {Exams.map((Exam) => (

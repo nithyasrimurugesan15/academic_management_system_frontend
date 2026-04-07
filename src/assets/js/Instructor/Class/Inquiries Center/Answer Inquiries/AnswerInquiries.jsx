@@ -5,7 +5,7 @@ import "./AnswerInquiries.css";
 
 import AnswerInQuiriesInput from "./AnswerInQuiriesInput";
 import { useDispatch, useSelector } from "react-redux";
-import LodingFeachData from "../../../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../../../components/loading-fetch-data/LoadingFetchData";
 import {
   GetAllInquiries,
   SeeNext,
@@ -36,7 +36,7 @@ function AnswerInquiries() {
   return (
     <React.Fragment>
       {loading ? (
-        <LodingFeachData />
+        <LoadingFetchData />
       ) : Inquiries.length > 0 ? (
         <React.Fragment>
           <div className="AnswerInquiries">

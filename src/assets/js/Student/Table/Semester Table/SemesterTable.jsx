@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
 import { GetStudentSemestersSubjects } from "../../../../Toolkit/Slices/SemestersSlice";
-import LodingFeachData from "../../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../../components/loading-fetch-data/LoadingFetchData";
 import "./SemesterTable.css";
 
 function SemesterTable() {
@@ -33,7 +33,7 @@ function SemesterTable() {
   return (
     <div className="SemesterTablePage">
       {loading ? (
-        <LodingFeachData />
+        <LoadingFetchData />
       ) : (
         <div className="container" data-aos="fade-down">
           <h1>{Subjects[0]?.Semester}</h1>

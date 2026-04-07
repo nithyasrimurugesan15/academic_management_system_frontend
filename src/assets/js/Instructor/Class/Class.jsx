@@ -5,7 +5,7 @@ import "./Class.css";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { Link } from "react-router-dom";
 import Mountain from "./../../components/Mountain Template/Mountain";
-import LodingFeachData from "./../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../components/loading-fetch-data/LoadingFetchData";
 import { useDispatch, useSelector } from "react-redux";
 import { GetAllInstructorSubjects } from "../../../Toolkit/Slices/SemestersSlice";
 import Select from "react-select";
@@ -103,7 +103,7 @@ function Class() {
         {/* ================= FORM ================= */}
         <div className="subjects">
           {loading ? (
-            <LodingFeachData />
+            <LoadingFetchData />
           ) : CreateField ? (
             <div className="add-new-Class">
               <div className="container">

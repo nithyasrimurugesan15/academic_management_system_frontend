@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LodingFeachData from "../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../loading-fetch-data/LoadingFetchData";
 import { useSelector, useDispatch } from "react-redux";
 import { getSingleBook } from "../../../Toolkit/Slices/LibrarySlice.js";
 
@@ -12,7 +12,7 @@ function BookCard() {
     <React.Fragment>
       <div className="books">
         {loading ? (
-          <LodingFeachData />
+          <LoadingFetchData />
         ) : (
           <div className="container" data-aos="fade-down">
             {Books.map((Book) => {

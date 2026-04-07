@@ -3,7 +3,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { Link } from "react-router-dom";
 import Mountain from "./../../components/Mountain Template/Mountain";
 import "./Class.css";
-import LodingFeachData from "../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../components/loading-fetch-data/LoadingFetchData";
 import { useDispatch, useSelector } from "react-redux";
 import { GetAllInstructorSubjects } from "../../../Toolkit/Slices/SemestersSlice";
 function Subjects() {
@@ -40,7 +40,7 @@ function Subjects() {
       </Mountain>
       <div className="subjects">
         {loading ? (
-          <LodingFeachData />
+          <LoadingFetchData />
         ) : (
           <div className="container" data-aos="fade-">
             {Subjects.filter((p) =>

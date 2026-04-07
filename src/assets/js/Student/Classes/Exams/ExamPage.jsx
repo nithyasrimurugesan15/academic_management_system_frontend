@@ -9,7 +9,7 @@ import {
   StudentAnswerExam,
 } from "../../../../Toolkit/Slices/ExamsSlice";
 import Toast_Handelar from "../../../components/Toast_Handelar";
-import LodingFeachData from "./../../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../../components/loading-fetch-data/LoadingFetchData";
 
 function ExamPage() {
   const Navigate = useNavigate();
@@ -69,7 +69,7 @@ function ExamPage() {
         </div>
       </Mountain>
       {loading ? (
-        <LodingFeachData />
+        <LoadingFetchData />
       ) : (
         <div className="ExamPage">
           <div className="container">

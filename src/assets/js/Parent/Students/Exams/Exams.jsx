@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
 import "./Exams.css";
-import LodingFeachData from "../../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../../components/loading-fetch-data/LoadingFetchData";
 import { useDispatch, useSelector } from "react-redux";
 import { GetExamsResult } from "../../../../Toolkit/Slices/ParentSlice";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
@@ -62,7 +62,7 @@ function Exams() {
 
       <div className="Exam">
         {loading ? (
-          <LodingFeachData />
+          <LoadingFetchData />
         ) : Exams.length > 0 ? (
           <div className="container">
             {Exams.map((Exam) => (

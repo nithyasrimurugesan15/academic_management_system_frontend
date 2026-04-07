@@ -5,7 +5,7 @@ import Mountain from "../../../components/Mountain Template/Mountain";
 import "./Exams.css";
 import { useDispatch, useSelector } from "react-redux";
 import { GetAllExams } from "../../../../Toolkit/Slices/ExamsSlice";
-import LodingFeachData from "./../../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../../components/loading-fetch-data/LoadingFetchData";
 function Exam() {
   const params = useParams();
   const Dispatch = useDispatch();
@@ -43,7 +43,7 @@ function Exam() {
         </div>
       </Mountain>
       {loading ? (
-        <LodingFeachData />
+        <LoadingFetchData />
       ) : (
         <React.Fragment>
           <div className="exams">

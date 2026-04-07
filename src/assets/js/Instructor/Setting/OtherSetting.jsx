@@ -1,5 +1,5 @@
 import React from "react";
-import LodingFeachData from "../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../components/loading-fetch-data/LoadingFetchData";
 import { useSelector, useDispatch } from "react-redux";
 import { ChangeInputLocal, Change_USER_Setting } from "../../../Toolkit/Slices/UserSlice";
 
@@ -10,7 +10,7 @@ function OtherSetting() {
     <React.Fragment>
       <div className="InstructorProfile" data-aos="fade-right">
         {loading ? (
-          <LodingFeachData />
+          <LoadingFetchData />
         ) : (
           <div className="container">
             <div className="box">

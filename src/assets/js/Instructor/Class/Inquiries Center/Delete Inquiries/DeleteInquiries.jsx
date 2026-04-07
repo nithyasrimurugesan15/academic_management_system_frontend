@@ -11,7 +11,7 @@ import {
   SeeNext,
   SeePrev,
 } from "../../../../../Toolkit/Slices/InquiriesSlice";
-import LodingFeachData from "../../../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../../../components/loading-fetch-data/LoadingFetchData";
 
 function DeleteInquiries() {
   const params = useParams();
@@ -60,7 +60,7 @@ function DeleteInquiries() {
   return (
     <React.Fragment>
       {loading ? (
-        <LodingFeachData />
+        <LoadingFetchData />
       ) : Inquiries.length > 0 ? (
         <React.Fragment>
           <div className="DeleteInquiries">

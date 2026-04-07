@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import LodingFeachData from "../../../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../../../components/loading-fetch-data/LoadingFetchData";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import "./EditSelectedExam.css";
@@ -49,7 +49,7 @@ function EditSelectedExam() {
       </Mountain>
       <div className="EditSelectedExam">
         {loading ? (
-          <LodingFeachData />
+          <LoadingFetchData />
         ) : (
           <div className="container">
             {SingleExamQuestions.length > 0 ? (

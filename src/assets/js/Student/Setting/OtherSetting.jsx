@@ -1,5 +1,5 @@
 import React from "react";
-import LodingFeachData from "../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../components/loading-fetch-data/LoadingFetchData";
 import { useSelector, useDispatch } from "react-redux";
 import {
   ChangeInputLocal,
@@ -14,7 +14,7 @@ function OtherSetting() {
     <React.Fragment>
       <div className="StudentProfile" data-aos="fade-right">
         {loading ? (
-          <LodingFeachData />
+          <LoadingFetchData />
         ) : (
           <div className="container">
             <div className="box">

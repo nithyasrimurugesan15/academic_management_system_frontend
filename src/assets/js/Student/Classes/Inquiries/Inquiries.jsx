@@ -12,7 +12,7 @@ import {
   SeeNext,
   SeePrev,
 } from "../../../../Toolkit/Slices/InquiriesSlice";
-import LodingFeachData from "../../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../../components/loading-fetch-data/LoadingFetchData";
 
 function Inquiries() {
   const params = useParams();
@@ -98,7 +98,7 @@ function Inquiries() {
         </div>
       </Mountain>
       {loading ? (
-        <LodingFeachData />
+        <LoadingFetchData />
       ) : Inquiries.length > 0 ? (
         <React.Fragment>
           <div className="Inquiries">

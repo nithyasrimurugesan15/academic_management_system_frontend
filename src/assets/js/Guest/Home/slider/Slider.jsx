@@ -96,7 +96,7 @@ function Slider() {
             <div>
               <p>
                 “True teachers...” —{" "}
-                <span className="color-red">Ithal</span>
+                <span className="color-red">Ithalyaa</span>
               </p>
             </div>
           </div>

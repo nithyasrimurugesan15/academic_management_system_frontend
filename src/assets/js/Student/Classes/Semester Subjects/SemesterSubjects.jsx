@@ -5,7 +5,7 @@ import Dots from "../../../components/Dots/Dots";
 import { useParams } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
 import axios from "axios";
-import LodingFeachData from "../../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../../components/loading-fetch-data/LoadingFetchData";
 
 function SemesterSubjects() {
   const { id } = useParams(); // 🔥 subject id
@@ -33,7 +33,7 @@ function SemesterSubjects() {
   return (
     <>
       {loading ? (
-        <LodingFeachData />
+        <LoadingFetchData />
       ) : (
         <div className="SemesterSubjects" id="Subjects">
           <Dots OtherStyle="top" />

@@ -1,5 +1,5 @@
 import React from "react";
-import LodingFeachData from "../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../components/loading-fetch-data/LoadingFetchData";
 import { useSelector } from "react-redux";
 
 function Profile() {
@@ -9,7 +9,7 @@ function Profile() {
     <React.Fragment>
       <div className="StudentProfile" data-aos="fade-right">
         {loading ? (
-          <LodingFeachData />
+          <LoadingFetchData />
         ) : (
           <div className="container">
             <div className="box">

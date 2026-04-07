@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
 import "./SubjectExams.css";
-import LodingFeachData from "./../../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../../components/loading-fetch-data/LoadingFetchData";
 
 import "react-circular-progressbar/dist/styles.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -27,7 +27,7 @@ function SubjectExams(props) {
     <React.Fragment>
       <div className="SubjectExams">
         {loading ? (
-          <LodingFeachData />
+          <LoadingFetchData />
         ) : Subjects.length > 0 ? (
           <div className="container">
             {Subjects.map((Exam) => (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Options from "./Options";
-import LodingFeachData from "../../../components/Loding Feach Data/LodingFeachData";
+import LoadingFetchData from "../../../components/loading-fetch-data/LoadingFetchData";
 import Sort from "../Sort/Sort";
 import "./CustomTable.css";
 
@@ -112,7 +112,7 @@ function CustomTable({ Type, ViewData, Serach }) {
           ) : null}
         </div>
       ) : (
-        <LodingFeachData />
+        <LoadingFetchData />
       )}
     </React.Fragment>
   );
