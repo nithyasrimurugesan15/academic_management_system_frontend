@@ -41,32 +41,30 @@ function App() {
   }, []);
 
   return (
-    <React.Fragment>
-      <i
-        className="fas fa-arrow-up back-to-top"
-        style={{ display: "none" }}
-        onClick={() => BackToTop()}
-        ref={BackToTopBtn}
-      />
+  <>
+    <i
+      className="fas fa-arrow-up back-to-top"
+      style={{ display: "none" }}
+      onClick={BackToTop}
+      ref={BackToTopBtn}
+    />
 
-      {!Login ? <Guest /> : <Auth />}
+    {!Login ? <Guest /> : <Auth />}
 
-      {/* 🔻 FOOTER ADDED HERE */}
-      <footer
-        style={{
-          textAlign: "center",
-          padding: "15px",
-          background: "#111",
-          color: "#fff",
-          marginTop: "20px",
-        }}
-      >
-        <p>
-          © {new Date().getFullYear()} Nithyasri | All Rights Reserved
-        </p>
-      </footer>
-    </React.Fragment>
-  );
+    <footer
+      style={{
+        textAlign: "center",
+        padding: "15px",
+        backgroundColor: "#111",
+        color: "#fff",
+      }}
+    >
+      <p>
+        © {new Date().getFullYear()} Nithyasri. All rights reserved.
+      </p>
+    </footer>
+  </>
+);
 }
 
 export default App;
