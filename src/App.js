@@ -48,7 +48,23 @@ function App() {
         onClick={() => BackToTop()}
         ref={BackToTopBtn}
       />
+
       {!Login ? <Guest /> : <Auth />}
+
+      {/* 🔻 FOOTER ADDED HERE */}
+      <footer
+        style={{
+          textAlign: "center",
+          padding: "15px",
+          background: "#111",
+          color: "#fff",
+          marginTop: "20px",
+        }}
+      >
+        <p>
+          © {new Date().getFullYear()} Nithyasri | All Rights Reserved
+        </p>
+      </footer>
     </React.Fragment>
   );
 }
