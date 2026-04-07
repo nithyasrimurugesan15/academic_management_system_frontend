@@ -27,7 +27,7 @@ function Slider() {
                 pass an examination, and finish with education. The whole of
                 life, from the moment you are born to the moment you die, is a
                 process of learning. ” —{" "}
-                <span className="color-red ">Jiddu Krishnamurti</span>
+                <span className="color-red ">Vishal</span>
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@ function Slider() {
                 within three years. Within five years you’ll be a national
                 authority. In seven years, you can be one of the best people in
                 the world at what you do.” —{" "}
-                <span className="color-red ">Earl Nightingale</span>
+                <span className="color-red ">Arun</span>
               </p>
             </div>
           </div>
@@ -82,7 +82,7 @@ function Slider() {
                 on learning until the moment you pass on. Your brain has a
                 capacity for learning that is virtually limitless, which makes
                 every human a potential genius.” —{" "}
-                <span className="color-red ">Michael J. Gelb</span>
+                <span className="color-red ">Siva</span>
               </p>
             </div>
           </div>
@@ -109,7 +109,7 @@ function Slider() {
                 which they invite their students to cross; then, having
                 facilitated their crossing, joyfully collapse, encouraging them
                 to create their own.” —{" "}
-                <span className="color-red ">Nikos Kazantzakis</span>
+                <span className="color-red ">Ithal</span>
               </p>
             </div>
           </div>
@@ -135,7 +135,7 @@ function Slider() {
                 “You can teach a student a lesson for a day; but if you can
                 teach him to learn by creating curiosity, he will continue the
                 learning process as long as he lives.” —{" "}
-                <span className="color-red ">Clay P. Bedford</span>
+                <span className="color-red ">Nagul</span>
               </p>
             </div>
           </div>
